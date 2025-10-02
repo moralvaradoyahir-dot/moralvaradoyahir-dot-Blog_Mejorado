@@ -1,0 +1,75 @@
+body { /* Estilos generales para toda la página */
+  font-family: Arial, sans-serif; /* Fuente de texto principal */
+  margin: 0; /* Elimina los márgenes por defecto */
+  padding: 0; /* Elimina los rellenos por defecto */
+  background: #f4f4f9; /* Color de fondo gris claro */
+}
+
+header { /* Estilos para el encabezado */
+  background: #333; /* Fondo gris oscuro */
+  color: white; /* Texto en color blanco */
+  text-align: center; /* Centra el texto horizontalmente */
+  padding: 1rem; /* Relleno interno de 1 unidad rem */
+}
+
+main { /* Estilos para el contenido principal */
+  max-width: 800px; /* Ancho máximo de 800px */
+  margin: 20px auto; /* Centra el contenido y deja 20px de margen arriba y abajo */
+  background: white; /* Fondo blanco */
+  padding: 20px; /* Espaciado interno de 20px */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra ligera alrededor */
+}
+
+h2 { /* Estilos para subtítulos */
+  color: #333; /* Texto en gris oscuro */
+}
+
+.comment-form { /* Estilos para el formulario de comentarios */
+  margin-bottom: 20px; /* Deja espacio debajo del formulario */
+}
+
+.comment-form input, 
+.comment-form textarea, 
+.comment-form button { /* Estilos compartidos por inputs, textarea y botones dentro del formulario */
+  width: 100%; /* Ocupar todo el ancho disponible */
+  margin: 5px 0; /* Espacio vertical entre elementos */
+  padding: 10px; /* Relleno interno */
+  border-radius: 5px; /* Bordes redondeados */
+  border: 1px solid #ccc; /* Borde gris claro */
+}
+
+.comment-form button { /* Estilos específicos para los botones */
+  background: #333; /* Fondo gris oscuro */
+  color: white; /* Texto en blanco */
+  border: none; /* Sin borde */
+  cursor: pointer; /* El cursor cambia a "mano" al pasar sobre el botón */
+}
+
+.comment-form button:hover { /* Efecto cuando se pasa el ratón sobre el botón */
+  background: #555; /* Cambia a gris más claro */
+}
+
+.comment-form .btn-delete { /* Botón de borrar comentarios */
+  background: darkred; /* Fondo rojo oscuro */
+}
+
+.comment-form .btn-delete:hover { /* Efecto hover para el botón de borrar */
+  background: red; /* Cambia a rojo brillante */
+}
+
+.comment { /* Estilos para cada comentario publicado */
+  border-bottom: 1px solid #ddd; /* Línea separadora debajo */
+  padding: 10px 0; /* Espaciado interno arriba y abajo */
+}
+
+.comment img { /* Estilos para las imágenes dentro de los comentarios */
+  max-width: 200px; /* Limita el ancho máximo a 200px */
+  display: block; /* La imagen se comporta como bloque */
+  margin-top: 10px; /* Espacio superior */
+  border-radius: 5px; /* Bordes redondeados */
+}
+
+.comment small { /* Estilos para la fecha de los comentarios */
+  color: gray; /* Texto en color gris */
+}
