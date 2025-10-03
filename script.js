@@ -69,3 +69,16 @@ function borrarComentarios() { // Función para borrar todos los comentarios
     document.getElementById('comentarios').innerHTML = '<h3>Comentarios</h3>'; // Restaura la sección de comentarios a su estado inicial
   }
 }
+// - - - - BLOQUE DE SEGURIDAD - - - -
+lett pass = promt("Introduce la contraseña para acceder al blog:");
+const passwordCorrecta = "54321";
+
+if (pass !== passwordCorrecta) {
+  document.body.innerHTML = "<h1>Acceso denegado ❌</h1>";
+} else {
+  // Solo si la contraseña es correcta, carga los comentarios guardados 
+  window.onload = fuction() {
+    const comentariosGuardados = JSON.parse(localStorage.getItem('comentarios')) || [];
+    comentariosGuardados.forEach(c => mostrarComentario(c));
+  }
+}
