@@ -3,7 +3,25 @@ window.onload = function() { // Se ejecuta automáticamente cuando la página te
   const comentariosGuardados = JSON.parse(localStorage.getItem('comentarios')) || []; // Obtiene los comentarios guardados en localStorage o un array vacío si no hay
   comentariosGuardados.forEach(c => mostrarComentario(c)); // Recorre cada comentario y lo muestra en pantalla
 }
-
+window.onload = function() {
+    // ----BLOQUE DE SEGURIDAD----
+    let pass = prompt("Introduce la contraseña para acceder al blog:");
+    const passwordCorrecta = "2312";
+    if (pass !== passwordCorrecta) {
+        document.body.innerHTML = "<h1>Acceso denegado ❌</h1>";
+    } else {
+        // Solo si la contraseña es correcta carga los comentarios guardados
+        const comentariosGuardados = JSON.parse(localStorage.getItem('comentarios')) || [];
+        console.log(comentariosGuardados); // Verifica si hay datos
+        comentariosGuardados.forEach(c => {
+            if (typeof mostrarComentario === 'function') {
+                mostrarComentario(c);
+            } else {
+                console.error('La función mostrarComentario no está definida');
+            }
+        });
+    }
+}
 function agregarComentario() { // Función que se ejecuta al hacer clic en "Publicar comentario"
   const nombre = document.getElementById('nombre').value.trim(); // Obtiene el nombre del input y elimina espacios extra
   const mensaje = document.getElementById('mensaje').value.trim(); // Obtiene el mensaje del textarea y elimina espacios extra
