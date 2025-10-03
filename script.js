@@ -3,6 +3,20 @@ window.onload = function() { // Se ejecuta automáticamente cuando la página te
   const comentariosGuardados = JSON.parse(localStorage.getItem('comentarios')) || []; // Obtiene los comentarios guardados en localStorage o un array vacío si no hay
   comentariosGuardados.forEach(c => mostrarComentario(c)); // Recorre cada comentario y lo muestra en pantalla
 }
+}
+// - - - - BLOQUE DE SEGURIDAD - - - -
+lett pass = promt("Introduce la contraseña para acceder al blog:");
+const passwordCorrecta = "54321";
+
+if (pass !== passwordCorrecta) {
+  document.body.innerHTML = "<h1>Acceso denegado ❌</h1>";
+} else {
+  // Solo si la contraseña es correcta, carga los comentarios guardados 
+  window.onload = fuction() {
+    const comentariosGuardados = JSON.parse(localStorage.getItem('comentarios')) || [];
+    comentariosGuardados.forEach(c => mostrarComentario(c));
+  }
+}
 
 function agregarComentario() { // Función que se ejecuta al hacer clic en "Publicar comentario"
   const nombre = document.getElementById('nombre').value.trim(); // Obtiene el nombre del input y elimina espacios extra
@@ -67,18 +81,5 @@ function borrarComentarios() { // Función para borrar todos los comentarios
   if (confirm("¿Estás seguro de borrar todos los comentarios?")) { // Pide confirmación al usuario
     localStorage.removeItem('comentarios'); // Elimina todos los comentarios guardados en localStorage
     document.getElementById('comentarios').innerHTML = '<h3>Comentarios</h3>'; // Restaura la sección de comentarios a su estado inicial
-  }
-}
-// - - - - BLOQUE DE SEGURIDAD - - - -
-lett pass = promt("Introduce la contraseña para acceder al blog:");
-const passwordCorrecta = "54321";
-
-if (pass !== passwordCorrecta) {
-  document.body.innerHTML = "<h1>Acceso denegado ❌</h1>";
-} else {
-  // Solo si la contraseña es correcta, carga los comentarios guardados 
-  window.onload = fuction() {
-    const comentariosGuardados = JSON.parse(localStorage.getItem('comentarios')) || [];
-    comentariosGuardados.forEach(c => mostrarComentario(c));
   }
 }
