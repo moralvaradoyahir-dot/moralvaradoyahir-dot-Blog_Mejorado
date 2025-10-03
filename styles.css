@@ -7,7 +7,7 @@ body { /* Estilos generales para toda la página */
 
 header { /* Estilos para el encabezado */
   background: #333; /* Fondo gris oscuro */
-  color: white; /* Texto en color blanco */
+  color: red; /* Texto en color rojo */
   text-align: center; /* Centra el texto horizontalmente */
   padding: 1rem; /* Relleno interno de 1 unidad rem */
 }
@@ -15,7 +15,7 @@ header { /* Estilos para el encabezado */
 main { /* Estilos para el contenido principal */
   max-width: 800px; /* Ancho máximo de 800px */
   margin: 20px auto; /* Centra el contenido y deja 20px de margen arriba y abajo */
-  background: white; /* Fondo blanco */
+  background: red; /* Fondo rojo */
   padding: 20px; /* Espaciado interno de 20px */
   border-radius: 10px; /* Bordes redondeados */
   box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra ligera alrededor */
